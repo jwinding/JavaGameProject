@@ -1,6 +1,7 @@
 package EntitySystem;
 
 import com.googlecode.lanterna.TerminalPosition;
+import javafx.geometry.Pos;
 
 public class Position {
     private double x,y;
@@ -31,11 +32,15 @@ public class Position {
 
 
     public TerminalPosition toTerminalPosition(){
-        return new TerminalPosition(getYAsInt(), getXAsInt());
+        return new TerminalPosition(getXAsInt(), getYAsInt());
     }
     @Override
     public String toString(){
         return "Position(x= " + x + ", y= " + y + ")";
     }
 
+
+    public boolean equalsInt(Position other){
+        return (getXAsInt() == other.getXAsInt())  && (getYAsInt() == other.getYAsInt());
+    }
 }

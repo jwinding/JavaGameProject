@@ -76,6 +76,8 @@ public abstract class Scene {
 
     public abstract void update(double time);
 
+    public abstract void checkTriggers();
+
     public abstract void handleInput();
 
     public Screen getScreen() {
